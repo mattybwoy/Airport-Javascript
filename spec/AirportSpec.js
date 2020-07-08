@@ -3,18 +3,18 @@ describe('Airport', function () {
   var plane;
   beforeEach(function () {
     airport = new Airport();
-    plane1 = new Plane();
+    plane = jasmine.createSpy('plane');
   });
   describe('land', function () {
     it('has 1 plane when landed', function () {
-      airport.land(plane1);
-      expect(airport.planes()).toEqual([plane1]);
+      airport.land(plane);
+      expect(airport.planes()).toEqual([plane]);
     });
   });
   describe('take-off', function () {
     it('should take-off a plane', function () {
-      airport.land(plane1)
-      airport.takeOff(plane1)
+      airport.land(plane)
+      airport.takeOff(plane)
       expect(airport.planes()).toEqual([]);
     });
   });
@@ -28,7 +28,7 @@ describe('Airport', function () {
         airport.land(plane = new Plane());
         airport.land(plane = new Plane());
         airport.land(plane = new Plane());
-        expect(function(){ airport.land(plane1);}).toThrowError('Airport full');
+        expect(function(){ airport.land(plane);}).toThrowError('Airport full');
       });
     });
 });
