@@ -64,7 +64,8 @@ I want to prevent landing when weather is stormy
 ```
 ## Progress so far
 - Started writing tests for the above user stories up to user story 3. Javascript written accordingly to pass said tests.
-- Next is to introduce spies to replicate Weather class and random method.
+- Have introduced a spy as a plane to simulate plane class.
+- Next step is to create the random weather class for next user story.
 
 ## Installation
 
