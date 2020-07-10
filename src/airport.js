@@ -1,5 +1,5 @@
 class Airport {
-
+  
     constructor() {
        this.hangar = [];
        this.capacity = 3;
